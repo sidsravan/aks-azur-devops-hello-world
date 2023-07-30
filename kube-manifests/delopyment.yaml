@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: #Dictionary
+  name: aks-sample
+spec: # Dictionary
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aks-sample
+  template:  
+    metadata: # Dictionary
+      name: aks-sample
+      labels: # Dictionary
+        app: aks-sample  # Key value paids
+    spec:
+      containers: # List
+        - name: aks-sample-container
+          image: azaksacr1.azurecr.io/aks-sample:15
+          ports: 
+            - containerPort: 80  
