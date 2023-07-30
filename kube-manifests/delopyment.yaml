@@ -15,7 +15,7 @@ spec: # Dictionary
     spec:
       containers: # List
         - name: aks-sample-container
-          image: azaksacr1.azurecr.io/aks-sample:15
+          image: azaksacr1.azurecr.io/aks-sample
           ports: 
             - containerPort: 80  
 
